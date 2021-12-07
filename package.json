@@ -19,6 +19,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^4.2.1",
     "mongoose": "^6.0.14",
+    "react-helmet": "^6.1.0",
     "util": "^0.12.4"
   },
   "devDependencies": {
