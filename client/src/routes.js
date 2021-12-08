@@ -6,7 +6,7 @@ import {AuthPage} from "./pages/AuthPaje";
 import {CrtrPage} from "./pages/CrtrPage";
 
 
-export const userRoutes = isAuthenticated => {
+export const useRoutes = isAuthenticated => {
     if (isAuthenticated) {
         return (
             <Switch>
