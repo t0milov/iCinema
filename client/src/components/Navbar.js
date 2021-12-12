@@ -14,11 +14,11 @@ export const Navbar = () => {
 
   return (
     <nav>
-      <div className="nav-wrapper blue darken-1" style={{ padding: '0 2rem' }}>
-        <span className="brand-logo">Сокращение ссылок</span>
+      <div className="nav-wrapper purple darken-3" style={{ padding: '0 2rem' }}>
+        <span className="brand-logo">iCinema</span>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
-          <li><NavLink to="/create">Создать</NavLink></li>
-          <li><NavLink to="/links">Ссылки</NavLink></li>
+          <li><NavLink to="/create">Создать фильм</NavLink></li>
+          <li><NavLink to="/links">Мои фильмы</NavLink></li>
           <li><a href="/" onClick={logoutHandler}>Выйти</a></li>
         </ul>
       </div>

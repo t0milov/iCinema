@@ -44,6 +44,7 @@ export const AuthPage = () => {
 
     return (
         <div id="container">
+            <div id="AuthContainer">
             <div id="row" className="row">
                 <div className="col s6 offset-l3">
                     <center>
@@ -103,6 +104,7 @@ export const AuthPage = () => {
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     )
