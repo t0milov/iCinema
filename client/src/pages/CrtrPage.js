@@ -11,9 +11,9 @@ export const CrtrPage = () => {
             <form class="col s12">
 
                 <div class="input-field col s12"
-                    style={{ width: 400 }} >
+                    style={{ width: "40%" }} >
                     <input
-                        id="first_name2"
+                        id="NameCinema"
                         type="text"
                         class="validate"
                         style={{ color: "#FFFFFF" }}
@@ -32,19 +32,19 @@ export const CrtrPage = () => {
 
             </form>
             <form action="#">
-                <div class="file-field input-field" style={{ width: 400 }}>
-                    <div class="waves-effect waves-light btn" style={{ width: 100 }} >
+                <div class="file-field input-field" style={{ width: "40%" }}>
+                    <div class="waves-effect waves-light btn" >
                         <span>Превью</span>
                         <input type="file" />
                     </div>
-                    <div class="file-path-wrapper" style={{ width: 300 }} >
+                    <div class="file-path-wrapper"  >
                         <input class="file-path validate" type="text" style={{ color: "#FFFFFF" }} />
                     </div>
                 </div>
             </form>
-
-            <a class="btn-large purple darken-4t">СОЗДАТЬ ФИЛЬМ</a>
-
+            <div>
+            <a class="btn-large purple darken-4t" >СОЗДАТЬ ФИЛЬМ</a>
+            </div>
 
         </div>
 
@@ -52,3 +52,5 @@ export const CrtrPage = () => {
 
     )
 }
+
+//    <a class="btn-large purple darken-4t" style={{ position: "absolute", right: "10", top:"5"}}>СОЗДАТЬ ФИЛЬМ</a>
