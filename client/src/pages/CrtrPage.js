@@ -1,9 +1,31 @@
 import React from "react";
+import axios from "axios";
 import './CrtrPage.css'
+// import { sendFile } from "express/lib/response";
 
 export const CrtrPage = () => {
 
     document.body.style = 'background: #1c1c1c;';
+
+    const [ img, setImg ] = React.useState(null)
+    const [, setAvatar] = React.useState(null)
+
+    const sendFile = React.useCallback(async () => {
+        try{
+            const data = new FormData()
+            data.append('fileName', img)
+
+            await axios.post('/api/auth/upload', data, {
+                headers: {
+                    'content-type' : 'multipart/form-data'
+                }
+            })
+
+            .then(res => setAvatar(res.data.path))
+
+        }catch(eror){}
+        
+    }, [img])
 
     return (
 
@@ -35,7 +57,7 @@ export const CrtrPage = () => {
                 <div class="file-field input-field" style={{ width: "40%" }}>
                     <div class="waves-effect waves-light btn" >
                         <span>Превью</span>
-                        <input type="file" />
+                        <input type="file" onChange={e => setImg(e.target.files[0])}/>
                     </div>
                     <div class="file-path-wrapper"  >
                         <input class="file-path validate" type="text" style={{ color: "#FFFFFF" }} />
@@ -43,7 +65,7 @@ export const CrtrPage = () => {
                 </div>
             </form>
             <div>
-            <a class="btn-large purple darken-4t" >СОЗДАТЬ ФИЛЬМ</a>
+            <a class="btn-large purple darken-4t" onClick={sendFile()}>СОЗДАТЬ ФИЛЬМ</a>
             </div>
 
         </div>
