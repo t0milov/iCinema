@@ -20,7 +20,7 @@ app.get('/api/auth/getjson/:projectName', async function(req, res){
   const query = Project.findOne( { projectName : req.params.projectName} )
   query.select('projectName project user')
   query.exec(function (err, project) {
-    if (err) return handleError(err);
+    if (err) return console.log(err);
     console.log(project);
     res.send(project)
   });

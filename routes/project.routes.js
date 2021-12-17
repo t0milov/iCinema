@@ -9,13 +9,11 @@ const router = Router()
 
 router.post('/saveProject', async  (req, res) => {
     try{
-        const userID = req.body.user
+        const user = req.body.user
 
         const projectID = req.body.projectName
 
         const project = req.body.project
-
-        console.log(userID)
 
         console.log(projectID)
 
@@ -32,6 +30,7 @@ router.post('/saveProject', async  (req, res) => {
          })
 
         await prog.save()
+        res.status(200).send('OK')
         
     }catch(eror){
         console.log(eror)
