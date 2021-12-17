@@ -5,7 +5,7 @@ const storage = multer.diskStorage({
         cb(null, 'public/')
     },
     filename(req, file, cb){
-        cb(null, req.params.videoId)
+        cb(null, req.params.videoId+'.mp4')
     }
 })
 

@@ -26,7 +26,7 @@ app.get('/api/auth/getjson/:projectName', async function(req, res){
   });
 })
 app.get('/video/:videoID', function(req, res) {
-  const path = "./assets/" + req.params.videoID + ".mp4"
+  const path = "./public/" + req.params.videoID + ".mp4"
   const stat = fs.statSync(path)
   const fileSize = stat.size
   const range = req.headers.range
